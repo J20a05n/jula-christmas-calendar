@@ -3,10 +3,17 @@ import "./App.css";
 //Json file that holds our door data. Could be changed to a database connection instead if prefered.
 import doors from "./json/doors.json";
 import shuffle from 'lodash/shuffle';
+import config from "./config";
 // Want to try a door and se what it looks like? Change the date to todays date.
 // Viewing this another year, change the dates in doors.json in json map
 
 function App() {
+  // Password for accessing the main application
+  const correctPassword = config.password; // Set your password here
+
+  // State to manage password input and authentication
+  const [password, setPassword] = useState("");
+  const [authenticated, setAuthenticated] = useState(false);
   // isOpen - the variable wich our localstorage item is saved to.
   const [isOpen, setIsOpen] = useState([]);
   // State wich is used as variable when saving to localstorage. Also used as a variable
@@ -74,9 +81,17 @@ function App() {
 
   const [openedDoors, setOpenedDoors] = useState([]);
 
+  const handlePasswordSubmit = () => {
+    if (password === correctPassword) {
+      setAuthenticated(true);
+    } else {
+      alert("Incorrect password. Please try again.");
+    }
+  };
 
   return (
     <div className="container">
+      {authenticated ? ( // Display your main application if authenticated
       <div className="content">
         <div className="calendar">
           {shuffledDoors.map((door, i) => {
@@ -102,7 +117,18 @@ function App() {
         <button className="resetbutton" onClick={resetDoors}>
           Reset doors
         </button>
-      </div>
+        </div>
+      ) : ( // Display the password input page if not authenticated
+        <div className="password-page">
+          <input
+            type="password"
+            placeholder="Enter Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button onClick={handlePasswordSubmit}>Submit</button>
+        </div>
+      )}
     </div>
   );
 }
