@@ -4,6 +4,8 @@ import "./App.css";
 import doors from "./json/doors.json";
 import shuffle from 'lodash/shuffle';
 import config from "./config";
+import CountdownTimer from "./CountdownTimer"; // Import the CountdownTimer component
+
 // Want to try a door and se what it looks like? Change the date to todays date.
 // Viewing this another year, change the dates in doors.json in json map
 
@@ -127,6 +129,7 @@ function App() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <button onClick={handlePasswordSubmit}>Submit</button>
+          <CountdownTimer /> {/* Include the CountdownTimer component */}
         </div>
       )}
     </div>

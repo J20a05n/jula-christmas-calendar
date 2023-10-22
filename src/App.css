@@ -82,3 +82,20 @@
 .resetbutton:active {
   background-color: rgba(71, 120, 141, 0.9);
 }
+.countdown-timer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  color: white; /* Set the text color to white */
+}
+
+.countdown-timer p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.countdown-timer div {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+}
