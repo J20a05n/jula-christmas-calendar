@@ -21,7 +21,13 @@ function App() {
   // State wich is used as variable when saving to localstorage. Also used as a variable
   // for useEffect to detect change
   const [submitToStorage, setSubmitToStorage] = useState([]);
+  const [openedDoors, setOpenedDoors] = useState([]); // Initialize the openedDoors state
 
+  useEffect(() => {
+    const local = localStorage.getItem("isOpen");
+    setIsOpen(local ? JSON.parse(local) : []); // Parse the stored JSON string into an array
+    setOpenedDoors(local ? JSON.parse(local) : []); // Parse the stored JSON string into an array
+  }, []);
   // Check if we are allowed to open the door. If the date has passed or not.
   // if true then call openDoor function. Else alert with message that you want.
   // or null if you prefer that
@@ -54,8 +60,8 @@ function App() {
       setOpenedDoors([...openedDoors, door]);
   
       // Update the state to mark the door as opened
-      setSubmitToStorage([...isOpen, day]);
-      localStorage.setItem("isOpen", JSON.stringify(submitToStorage));
+      setOpenedDoors([...openedDoors, day]);
+      localStorage.setItem("isOpen", JSON.stringify([...openedDoors, day]));
     }
   };
 
@@ -71,17 +77,11 @@ function App() {
   const resetDoors = () => {
     setSubmitToStorage([]);
     localStorage.removeItem("isOpen");
+    setOpenedDoors([]); // Clear the opened doors
   };
-
-  // Initial fetch of localstorage.
-  useEffect(() => {
-    const local = localStorage.getItem("isOpen");
-    setIsOpen(local ? local : []);
-  }, [submitToStorage]);
 
   const shuffledDoors = shuffle(doors);
 
-  const [openedDoors, setOpenedDoors] = useState([]);
 
   const handlePasswordSubmit = () => {
     if (password === correctPassword) {
@@ -91,13 +91,23 @@ function App() {
     }
   };
 
+  const handlePasswordInputChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handlePasswordInputKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handlePasswordSubmit();
+    }
+  };
+
   return (
     <div className="container">
       {authenticated ? ( // Display your main application if authenticated
       <div className="content">
         <div className="calendar">
           {shuffledDoors.map((door, i) => {
-            const isDoorOpened = openedDoors.some((openedDoor) => openedDoor.day === door.day);
+            const isDoorOpened = openedDoors.some((openedDoor) => openedDoor === door.day);
             return (
               <div key={i}>
                 {isDoorOpened ? (
@@ -117,20 +127,24 @@ function App() {
           })}
         </div>
         <button className="resetbutton" onClick={resetDoors}>
-          Reset doors
+          Kalender Zurücksetzen
         </button>
         </div>
       ) : ( // Display the password input page if not authenticated
+      <div className="center-content">
+          <CountdownTimer />
         <div className="password-page">
           <input
             type="password"
             placeholder="Enter Password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={handlePasswordInputChange}
+            onKeyPress={handlePasswordInputKeyPress}
           />
           <button onClick={handlePasswordSubmit}>Submit</button>
-          <CountdownTimer /> {/* Include the CountdownTimer component */}
+          
         </div>
+      </div>
       )}
     </div>
   );

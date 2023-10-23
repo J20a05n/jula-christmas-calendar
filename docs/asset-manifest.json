@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/jula-christmas-calendar/static/css/main.b28abc4f.css",
-    "main.js": "/jula-christmas-calendar/static/js/main.abd3f930.js",
+    "main.css": "/jula-christmas-calendar/static/css/main.5986fd9f.css",
+    "main.js": "/jula-christmas-calendar/static/js/main.ac0bdef8.js",
     "static/js/787.c80fc881.chunk.js": "/jula-christmas-calendar/static/js/787.c80fc881.chunk.js",
     "index.html": "/jula-christmas-calendar/index.html",
-    "main.b28abc4f.css.map": "/jula-christmas-calendar/static/css/main.b28abc4f.css.map",
-    "main.abd3f930.js.map": "/jula-christmas-calendar/static/js/main.abd3f930.js.map",
+    "main.5986fd9f.css.map": "/jula-christmas-calendar/static/css/main.5986fd9f.css.map",
+    "main.ac0bdef8.js.map": "/jula-christmas-calendar/static/js/main.ac0bdef8.js.map",
     "787.c80fc881.chunk.js.map": "/jula-christmas-calendar/static/js/787.c80fc881.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b28abc4f.css",
-    "static/js/main.abd3f930.js"
+    "static/css/main.5986fd9f.css",
+    "static/js/main.ac0bdef8.js"
   ]
 }
