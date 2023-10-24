@@ -5,7 +5,7 @@
   padding: 1em;
   padding-top: 5em;
   padding-bottom: 5em;
-  background-color: rgb(8, 24, 23);
+  background-color: rgb(5, 41, 26);
 }
 .calendar {
   width: 50vw;
@@ -94,6 +94,12 @@
   font-weight: bold;
 }
 
+.countdown-time  {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(197, 49, 49);
+}
+
 .countdown-timer div {
   display: inline-block;
   margin: 0 10px;
@@ -107,4 +113,34 @@
   justify-content: center; /* Center elements vertically */
   margin-top: 5m; /* Adjust the margin-top to move it down the page */
   height: 100vh; /* Center vertically within the viewport */
+}
+.timer-image {
+  position: absolute;
+  top: 0;
+  right: 200px; /* Adjust this value to move it to the left */
+  max-width: 100px; /* Adjust the width as needed */
+  max-height: 100px; /* Adjust the height as needed */
+}
+.timer-image2 {
+  position: absolute;
+  top: 0;
+  right: 1600px; /* Adjust this value to move it to the left */
+  max-width: 100px; /* Adjust the width as needed */
+  max-height: 100px; /* Adjust the height as needed */
+}
+.leaf-image {
+  position: absolute;
+  top: 0;
+  right: 900px; /* Adjust this value to move it to the left */
+  max-width: 100px; /* Adjust the width as needed */
+  max-height: 100px; /* Adjust the height as needed */
+  animation: spin 20s linear infinite; /* Adjust the animation duration as needed */
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
