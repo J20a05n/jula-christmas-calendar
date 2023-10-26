@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef} from "react";
 import timerImage from './images/ornament_1.png'; // Import your image
 import leafImage from './images/leaf_1.png'; // Import your image
 
@@ -40,19 +40,40 @@ function CountdownTimer() {
     return () => clearInterval(timer);
   }, []);
 
+  const [isTextVisible, setIsTextVisible] = useState(false);
+  const textRef = useRef(null);
+
+  const handleImageClick = () => {
+    setIsTextVisible(!isTextVisible);
+  };
+
   return (
     <div className="countdown-timer">
-      <img src={timerImage} alt="Timer" className="timer-image" />
+      <a href="#" onClick={handleImageClick}>
+        <img src={timerImage} alt="Timer" className="timer-image" />
+      </a>
       <img src={timerImage} alt="Timer2" className="timer-image2" />
       <img src={leafImage} alt="Leaf" className="leaf-image" />
       <p>Noch:</p>
         <div className="countdown-time">
-      <div>{countdown.days} Tage</div>
-      <div>{countdown.hours} Stunden</div>
-      <div>{countdown.minutes} Minuten</div>
-      <div>{countdown.seconds} Sekunden</div>
+          <div>{countdown.days} Tage</div>
+          <div>{countdown.hours} Stunden</div>
+          <div>{countdown.minutes} Minuten</div>
+          <div>{countdown.seconds} Sekunden</div>
         </div>
       <p>bis zum ersten Dezember</p>
+      {isTextVisible && (
+        <div ref={textRef} style={{ color: "blue", fontSize: "80%"}}>
+          Day by day, the puzzle unfolds more,
+          <br></br>
+          Piece by piece, the solution's in store.
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+        </div>
+      )}
     </div>
   );
 }

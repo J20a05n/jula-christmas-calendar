@@ -144,3 +144,8 @@
     transform: rotate(360deg);
   }
 }
+.riddle-text {
+  text-align: center;
+  bottom: 10; /* Adjust the value as needed to position it at the desired height from the bottom */
+  color: red;
+}

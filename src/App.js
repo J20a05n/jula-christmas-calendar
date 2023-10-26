@@ -101,6 +101,8 @@ function App() {
     }
   };
 
+  
+
   return (
     <div className="container">
       {authenticated ? ( // Display your main application if authenticated
@@ -131,20 +133,26 @@ function App() {
         </button>
         </div>
       ) : ( // Display the password input page if not authenticated
-      <div className="center-content">
+        <div className="center-content">
           <CountdownTimer />
-        <div className="password-page">
-          <input
-            type="password"
-            placeholder="Enter Password"
-            value={password}
-            onChange={handlePasswordInputChange}
-            onKeyPress={handlePasswordInputKeyPress}
-          />
-          <button onClick={handlePasswordSubmit}>Submit</button>
-          
+          <div className="riddle-text">
+            I'm a calendar unique, with surprises concealed,
+            <br></br>
+            Each day, a small mystery, yet to be revealed.
+            <br></br>
+            ...
+            <div className="password-page">
+            <input
+              type="password"
+              placeholder="Enter Password"
+              value={password}
+              onChange={handlePasswordInputChange}
+              onKeyPress={handlePasswordInputKeyPress}
+            />
+            <button onClick={handlePasswordSubmit}>Submit</button>
+            </div>
+          </div>
         </div>
-      </div>
       )}
     </div>
   );
