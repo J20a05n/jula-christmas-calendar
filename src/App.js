@@ -140,6 +140,10 @@ function App() {
             <br></br>
             Each day, a small mystery, yet to be revealed.
             <br></br>
+            You'll find me in homes, a December tradition,
+            <br></br>
+            I add to the season, with daily elation.
+            <br></br>
             ...
             <div className="password-page">
             <input
