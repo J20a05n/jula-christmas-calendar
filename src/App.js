@@ -144,6 +144,11 @@ function App() {
             <br></br>
             I add to the season, with daily elation.
             <br></br>
+            <br></br>
+            On my colorful surface, the numbers don't reveal,
+            <br></br>
+            The object that's kept concealed.
+            <br></br>
             ...
             <div className="password-page">
             <input
