@@ -12,16 +12,15 @@ import CountdownTimer from "./CountdownTimer"; // Import the CountdownTimer comp
 function App() {
   // Password for accessing the main application
   const correctPassword = config.password; // Set your password here
+  const semiPassword = config.semiPassword;
 
-  // State to manage password input and authentication
   const [password, setPassword] = useState("");
+  const [password2, setPassword2] = useState(""); // Add state for the second password
   const [authenticated, setAuthenticated] = useState(false);
-  // isOpen - the variable wich our localstorage item is saved to.
+  const [authenticated2, setAuthenticated2] = useState(false); // Add state for the second password
   const [isOpen, setIsOpen] = useState([]);
-  // State wich is used as variable when saving to localstorage. Also used as a variable
-  // for useEffect to detect change
   const [submitToStorage, setSubmitToStorage] = useState([]);
-  const [openedDoors, setOpenedDoors] = useState([]); // Initialize the openedDoors state
+  const [openedDoors, setOpenedDoors] = useState([]);
 
   useEffect(() => {
     const local = localStorage.getItem("isOpen");
@@ -91,13 +90,31 @@ function App() {
     }
   };
 
+  const handlePasswordSubmit2 = () => {
+    if (password2 === semiPassword) {
+      setAuthenticated2(true);
+    } else {
+      alert("Incorrect password. Please try again.");
+    }
+  };
+
   const handlePasswordInputChange = (e) => {
     setPassword(e.target.value);
+  };
+
+  const handlePasswordInputChange2 = (e) => {
+    setPassword2(e.target.value);
   };
 
   const handlePasswordInputKeyPress = (e) => {
     if (e.key === "Enter") {
       handlePasswordSubmit();
+    }
+  };
+
+  const handlePasswordInputKeyPress2 = (e) => {
+    if (e.key === "Enter") {
+      handlePasswordSubmit2();
     }
   };
 
@@ -132,7 +149,11 @@ function App() {
           Kalender Zurücksetzen
         </button>
         </div>
-      ) : ( // Display the password input page if not authenticated
+      ) : authenticated2 ? (
+        <div className="message">
+          <p style={{ color: "red" }}>Geschafft! Mach hier von einen Screenshot und schick ihn mir, dann gibts was kleines :)</p>
+        </div>
+      ) : (
         <div className="center-content">
           <CountdownTimer />
           <div className="riddle-text">
@@ -149,8 +170,12 @@ function App() {
             <br></br>
             The object that's kept concealed.
             <br></br>
+            A countdown to Christmas, with joy I am filled,
+            <br></br>
+            What am I, in homes, that keeps time's thrill?
+            <br></br>
             ...
-            <div className="password-page">
+            {/* <div className="password-page">
             <input
               type="password"
               placeholder="Enter Password"
@@ -159,7 +184,17 @@ function App() {
               onKeyPress={handlePasswordInputKeyPress}
             />
             <button onClick={handlePasswordSubmit}>Submit</button>
-            </div>
+            </div> */}
+          </div>
+          <div className="password-page">
+            <input
+              type="password"
+              placeholder="Alles klein geschrieben" // Change the placeholder text
+              value={password2}
+              onChange={handlePasswordInputChange2}
+              onKeyPress={handlePasswordInputKeyPress2}
+            />
+            <button onClick={handlePasswordSubmit2}>Submit</button>
           </div>
         </div>
       )}
