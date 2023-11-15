@@ -184,8 +184,12 @@ function App() {
             <br></br>
             Adorning windows, creating a sight.
             <br></br>
+            Intricate and lacy, I'm a chilly art,
+            <br></br>
+            A decoration that warms the heart.
+            <br></br>
             ...
-            {/* <div className="password-page">
+            <div className="password-page">
             <input
               type="password"
               placeholder="Enter Password"
@@ -194,9 +198,9 @@ function App() {
               onKeyPress={handlePasswordInputKeyPress}
             />
             <button onClick={handlePasswordSubmit}>Submit</button>
-            </div> */}
+            </div>
           </div>
-          <div className="password-page">
+          {/* <div className="password-page">
             <input
               type="password"
               placeholder="Alles klein geschrieben" // Change the placeholder text
@@ -205,7 +209,7 @@ function App() {
               onKeyPress={handlePasswordInputKeyPress2}
             />
             <button onClick={handlePasswordSubmit2}>Submit</button>
-          </div>
+          </div> */}
         </div>
       )}
     </div>

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/jula-christmas-calendar/static/css/main.19807c4a.css",
-    "main.js": "/jula-christmas-calendar/static/js/main.5b50cc18.js",
+    "main.js": "/jula-christmas-calendar/static/js/main.fbcb2aa7.js",
     "static/js/27.f034928d.chunk.js": "/jula-christmas-calendar/static/js/27.f034928d.chunk.js",
     "static/media/ornament_1.png": "/jula-christmas-calendar/static/media/ornament_1.068e2d99f4b4da2f566e.png",
     "static/media/leaf_1.png": "/jula-christmas-calendar/static/media/leaf_1.6e6300fc87c11dd2b7c5.png",
@@ -9,6 +9,6 @@
   },
   "entrypoints": [
     "static/css/main.19807c4a.css",
-    "static/js/main.5b50cc18.js"
+    "static/js/main.fbcb2aa7.js"
   ]
 }
