@@ -176,10 +176,6 @@ function App() {
             <br></br>
             |
             <br></br>
-            |
-            <br></br>
-            |
-            <br></br>
             I'm made of frost, a winter's delight,
             <br></br>
             Adorning windows, creating a sight.
@@ -188,16 +184,25 @@ function App() {
             <br></br>
             A decoration that warms the heart.
             <br></br>
+            <br></br>
+            I form on glass when temperatures drop,
+            <br></br>
+            A crystalline pattern, I can't stop.
+            <br></br>
+            A natural beauty, on panes, I cling tight,
+            <br></br>
+            What am I that decorates the winter night?
+            <br></br>
             ...
             <div className="password-page">
             <input
               type="password"
-              placeholder="Enter Password"
+              placeholder="Alles klein :)"
               value={password}
               onChange={handlePasswordInputChange}
               onKeyPress={handlePasswordInputKeyPress}
             />
-            <button onClick={handlePasswordSubmit}>Submit</button>
+            <button onClick={handlePasswordSubmit}>Los</button>
             </div>
           </div>
           {/* <div className="password-page">
