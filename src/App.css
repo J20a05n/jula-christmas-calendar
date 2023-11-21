@@ -144,8 +144,35 @@
     transform: rotate(360deg);
   }
 }
-.riddle-text {
+.center-content {
+  color: rgb(255, 255, 255);
+  font-family: Arial, sans-serif;
   text-align: center;
+}
+.calendar-riddle {
   bottom: 10; /* Adjust the value as needed to position it at the desired height from the bottom */
   color: red;
+}
+.frost-riddle {
+  bottom: 10; /* Adjust the value as needed to position it at the desired height from the bottom */
+  color: rgb(255, 123, 0);
+}
+.dash-riddle {
+  bottom: 10; /* Adjust the value as needed to position it at the desired height from the bottom */
+  color: rgb(0, 153, 255);
+}
+
+.snowfall-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.snowflake {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  pointer-events: none;
 }

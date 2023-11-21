@@ -6,6 +6,8 @@ import shuffle from 'lodash/shuffle';
 import config from "./config";
 import CountdownTimer from "./CountdownTimer"; // Import the CountdownTimer component
 
+import Snowfall from "./json/snowflake";
+
 // Want to try a door and se what it looks like? Change the date to todays date.
 // Viewing this another year, change the dates in doors.json in json map
 
@@ -156,7 +158,7 @@ function App() {
       ) : (
         <div className="center-content">
           <CountdownTimer />
-          <div className="riddle-text">
+          <div className="calendar-riddle">
             I'm a calendar unique, with surprises concealed,
             <br></br>
             Each day, a small mystery, yet to be revealed.
@@ -173,9 +175,12 @@ function App() {
             A countdown to Christmas, with joy I am filled,
             <br></br>
             What am I, in homes, that keeps time's thrill?
+          </div>
             <br></br>
             |
             <br></br>
+            <br></br>
+          <div className="frost-riddle">
             I'm made of frost, a winter's delight,
             <br></br>
             Adorning windows, creating a sight.
@@ -193,7 +198,21 @@ function App() {
             <br></br>
             What am I that decorates the winter night?
             <br></br>
+          </div>
+            <br></br>
+            |
+            <br></br>
+            <br></br>
+          <div className="dash-riddle">
+            I'm a holiday duo, with a dash to connect,
+            <br></br>
+            The first holds surprises, a month-long prospect.
+          </div>
             ...
+            <div className="center-content">
+              <Snowfall />
+              {/* ... (your riddles and password input JSX) */}
+            </div>
             <div className="password-page">
             <input
               type="password"
@@ -204,7 +223,6 @@ function App() {
             />
             <button onClick={handlePasswordSubmit}>Los</button>
             </div>
-          </div>
           {/* <div className="password-page">
             <input
               type="password"
@@ -215,6 +233,7 @@ function App() {
             />
             <button onClick={handlePasswordSubmit2}>Submit</button>
           </div> */}
+          
         </div>
       )}
     </div>
