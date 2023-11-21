@@ -85,7 +85,7 @@ function App() {
 
 
   const handlePasswordSubmit = () => {
-    if (password === correctPassword) {
+    if (password === correctPassword || password === semiPassword) {
       setAuthenticated(true);
     } else {
       alert("Incorrect password. Please try again.");
