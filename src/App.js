@@ -166,8 +166,7 @@ function App() {
             You'll find me in homes, a December tradition,
             <br></br>
             I add to the season, with daily elation.
-            <br></br>
-            <br></br>
+            <br></br><br></br>
             On my colorful surface, the numbers don't reveal,
             <br></br>
             The object that's kept concealed.
@@ -177,7 +176,7 @@ function App() {
             What am I, in homes, that keeps time's thrill?
           </div>
             <br></br>
-            |
+            <span style={{ color: 'purple', fontStyle: 'italic' }}>|</span>
             <br></br>
             <br></br>
           <div className="frost-riddle">
@@ -188,8 +187,7 @@ function App() {
             Intricate and lacy, I'm a chilly art,
             <br></br>
             A decoration that warms the heart.
-            <br></br>
-            <br></br>
+            <br></br><br></br>
             I form on glass when temperatures drop,
             <br></br>
             A crystalline pattern, I can't stop.
@@ -200,18 +198,21 @@ function App() {
             <br></br>
           </div>
             <br></br>
-            |
+            <span style={{ color: 'purple', fontStyle: 'italic' }}>|</span>
             <br></br>
             <br></br>
           <div className="dash-riddle">
-            I'm a holiday duo, with a dash to connect,
+            I'm a holiday duo, with a <span style={{ color: 'purple', fontStyle: 'italic' }}>dash</span> to connect,
             <br></br>
-            The first holds surprises, a month-long prospect.
+            The <span style={{ color: 'red', fontStyle: 'italic' }}>first</span> holds surprises, a month-long prospect.
+            <br></br><br></br>
+            The <span style={{ color: 'rgb(255, 123, 0)', fontStyle: 'italic' }}>second's</span> a crystal, delicate and bright,
+            <br></br>
+            <span style={{ color: 'purple', fontStyle: 'italic' }}>Line</span> them up, and you'll get delight.
           </div>
-            ...
             <div className="center-content">
               <Snowfall />
-              {/* ... (your riddles and password input JSX) */}
+              {}
             </div>
             <div className="password-page">
             <input
