@@ -214,6 +214,10 @@ function App() {
               <Snowfall />
               {}
             </div>
+            <br></br> <br></br> <br></br> <br></br>
+            <span style={{ color: 'red', fontStyle: 'italic' }}>?</span> 
+            <span style={{ color: 'purple', fontStyle: 'italic' }}>?</span> 
+            <span style={{ color: 'rgb(255, 123, 0)', fontStyle: 'italic' }}>?</span> 
             <div className="password-page">
             <input
               type="password"

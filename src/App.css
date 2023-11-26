@@ -112,7 +112,7 @@
   align-items: center; /* Center elements horizontally */
   justify-content: center; /* Center elements vertically */
   margin-top: 5m; /* Adjust the margin-top to move it down the page */
-  height: 100vh; /* Center vertically within the viewport */
+  height: 20vh; /* Center vertically within the viewport */
 }
 .timer-image {
   position: absolute;
