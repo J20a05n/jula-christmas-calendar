@@ -1,0 +1,31 @@
+/* UnderConstruction.css */
+.under-construction-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    -45deg,
+    #990000,
+    #990000 20px,
+    #cc9900 20px,
+    #cc9900 40px
+  );
+}
+
+.construction-sign {
+  text-align: center;
+  padding: 20px;
+  background-color: #333; /* Darker background color */
+  color: #fff; /* Text color */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.construction-worker {
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Add more styling as needed */
