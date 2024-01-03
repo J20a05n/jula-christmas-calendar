@@ -7,9 +7,9 @@
   background: repeating-linear-gradient(
     -45deg,
     #990000,
-    #990000 20px,
-    #cc9900 20px,
-    #cc9900 40px
+    #990000 40px,
+    #cc9900 40px,
+    #cc9900 80px
   );
 }
 
@@ -20,12 +20,39 @@
   color: #fff; /* Text color */
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-.construction-worker {
+.gear-wheel {
   margin-top: 20px;
-  max-width: 100%;
-  height: auto;
+  animation: spin 9s linear infinite; /* Spinning animation */
 }
 
-/* Add more styling as needed */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.countdown {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.countdown-timer div {
+  text-align: center;
+}
+
+.countdown-timer span {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 5px;
+}

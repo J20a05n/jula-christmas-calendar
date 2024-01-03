@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/jula-christmas-calendar/static/css/main.61afde3f.css",
-    "main.js": "/jula-christmas-calendar/static/js/main.623df283.js",
+    "main.css": "/jula-christmas-calendar/static/css/main.3596a745.css",
+    "main.js": "/jula-christmas-calendar/static/js/main.7460041e.js",
     "static/js/27.f034928d.chunk.js": "/jula-christmas-calendar/static/js/27.f034928d.chunk.js",
     "index.html": "/jula-christmas-calendar/index.html"
   },
   "entrypoints": [
-    "static/css/main.61afde3f.css",
-    "static/js/main.623df283.js"
+    "static/css/main.3596a745.css",
+    "static/js/main.7460041e.js"
   ]
 }
